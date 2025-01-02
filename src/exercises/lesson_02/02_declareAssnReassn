@@ -1,0 +1,7 @@
+function declareAssign() {
+  // Your code here...
+}
+
+/** DO NOT MODIFY BELOW **/
+
+export default declareAssign
