@@ -1,15 +1,12 @@
 import { Outlet } from "react-router-dom"
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-blue-800 mb-8">
-        Welcome to My App
-      </h1>
-      <div>
+    <>
+      <div className="max-w-2xl container mx-auto p-4">
         <Outlet />
       </div>
-    </div>
+    </>
   )
 }
 

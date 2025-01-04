@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom"
+import jsLogo from "/jslogo.jpg"
 
 const MainMenu = () => {
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-800 p-2 flex justify-between items-center">
       <ul className="flex space-x-4">
         <li>
           <NavLink
@@ -16,12 +17,12 @@ const MainMenu = () => {
         </li>
         <li>
           <NavLink
-            to="/about"
+            to="/getting-started"
             className={({ isActive }) =>
               isActive ? "text-white" : "text-gray-400"
             }
           >
-            About
+            Getting Started
           </NavLink>
         </li>
         <li>
@@ -35,6 +36,7 @@ const MainMenu = () => {
           </NavLink>
         </li>
       </ul>
+      <img src={jsLogo} alt="JS Logo" className="h-7 w-7" />
     </nav>
   )
 }

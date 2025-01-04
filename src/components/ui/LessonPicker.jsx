@@ -29,32 +29,29 @@ const LessonPicker = () => {
     fetchComponentNames()
   }, [])
 
-  const handleSelectionChange = (event) => {
-    const selectedValue = event.target.value
-    setSelectedComponent(selectedValue)
-    const dynamicId = selectedValue
-    navigate(`${dynamicId}`, { relative: true })
+  const handleButtonClick = (componentId) => {
+    setSelectedComponent(componentId)
+    navigate(`${componentId}`, { relative: true })
   }
 
   return (
-    <div className="p-4 max-w-md mx-auto bg-white rounded-xl shadow-md space-y-4">
-      <select
-        id="component-select"
-        name="component-select"
-        value={selectedComponent}
-        onChange={handleSelectionChange}
-        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-      >
-        <option value="" disabled>
-          Select a Lesson
-        </option>
+    <>
+      <div className="grid grid-cols-12 gap-2">
         {componentNames.map((component, index) => (
-          <option key={index} value={component._id}>
-            {component.name}
-          </option>
+          <button
+            key={index}
+            onClick={() => handleButtonClick(component._id)}
+            className={`py-1 px-1 rounded-md text-white ${
+              selectedComponent === component._id
+                ? "bg-blue-600"
+                : "bg-blue-500"
+            } hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+          >
+            {component._id.replace(/^0+/, "")}
+          </button>
         ))}
-      </select>
-    </div>
+      </div>
+    </>
   )
 }
 

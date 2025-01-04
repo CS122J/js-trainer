@@ -10,16 +10,16 @@ const __dirname = dirname(__filename)
 
 const fetchExercises = async () => {
   try {
-    const response = await fetch("http://localhost:3001/fetch-exercises")
+    const response = await fetch(
+      "https://js-exercises.up.railway.app/api/fetch-exercises"
+    )
     if (!response.ok) {
       throw new Error("Failed to fetch exercises")
     }
 
     const directory = path.join(__dirname, "./../../../src")
     const extractStream = unzipper.Parse()
-
     response.body.pipe(extractStream)
-
     extractStream.on("entry", async (entry) => {
       const filePath = path.join(directory, entry.path)
       const dirPath = path.dirname(filePath)

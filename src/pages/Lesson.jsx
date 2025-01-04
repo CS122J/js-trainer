@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from "react"
+import { Suspense, lazy } from "react"
 import { useParams } from "react-router-dom"
 
 const Lesson = () => {
   const { lessonId } = useParams()
-  const [LessonComponent, setLessonComponent] = useState(null)
-
-  useEffect(() => {
-    const loadComponent = async () => {
-      const { default: Component } = await import(
-        `./../components/prompts/Lesson_${lessonId}.jsx`
-      )
-      setLessonComponent(() => Component)
-    }
-    loadComponent()
-  }, [lessonId])
+  const LessonComponent = lazy(() =>
+    import(`./../components/prompts/Lesson_${lessonId}.jsx`)
+  )
 
   return (
-    <React.Suspense fallback={<div>Loading...</div>}>
-      {LessonComponent ? <LessonComponent /> : <div>Loading...</div>}
-    </React.Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
+      <LessonComponent lessonId={lessonId} />
+    </Suspense>
   )
 }
 
