@@ -103,7 +103,7 @@ const Prompt = ({ ansFilename, promptJSX, lessonId }) => {
 const CodeExample = ({ children }) => {
   return (
     <>
-      <div className="p-2 text-sm font-medium bg-blue-100">
+      <div className="p-2 my-2 text-sm font-medium bg-blue-100">
         <pre className="whitespace-pre-wrap break-words">
           <code>{children}</code>
         </pre>
@@ -128,7 +128,10 @@ const OutputToHTML = ({ answer, log }) => {
         </div>
       ) : (
         <div className="bg-yellow-100 text-red-500 p-3 rounded-lg font-medium">
-          ERROR: Check the Problems tab in VSCode.
+          ERROR! <br />
+          1) Check the Problems tab in VSCode.
+          <br />
+          2) Check the browser console for errors.
         </div>
       )}
     </>
