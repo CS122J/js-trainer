@@ -1,8 +1,38 @@
-# React + Vite
+# JavaScript Exercises App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app provides beginner to intermediate-level JavaScript challenges to help you improve your coding skills. It is designed to run locally on your machine in conjunction with VSCode, allowing you to edit the JavaScript starter code files located in the `/src/exercises` folder. Upon saving your changes, you can view the output directly in your browser.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive coding exercises designed for hands-on learning.
+- Live updates in the browser for an enhanced coding experience.
+- Organized structure for editing and testing JavaScript challenges.
+
+## Prerequisites
+
+Before you begin, ensure you meet the following requirements:
+
+- **NodeJS version 20 or higher**  
+  Confirm your version by running the following command in your terminal:
+
+  ```bash
+  node -v
+
+  ```
+
+- **VSCode extensions**
+  Install the following extensions for the best coding experience:
+  - ESLint
+  - Prettier - Code Formatter
+  - Chrome browser — Use Chrome for debugging and development for optimal performance.
+
+## Installation
+
+Follow these steps to set up the app locally:
+
+1. Clone the repository
+2. Install npm dependencies at the root project folder: `npm install`
+3. Install npm dependencies from the `/backend` folder: `npm install`
+4. Navigate back to the root project folder and launch the app: `npm start`
+
+**_Note: The start script will launch the frontend and backend servers_**
