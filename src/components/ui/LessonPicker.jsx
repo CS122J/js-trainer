@@ -5,7 +5,6 @@ const LessonPicker = () => {
   const [componentNames, setComponentNames] = useState([])
   const [selectedComponent, setSelectedComponent] = useState("")
   const navigate = useNavigate()
-  window.location.reload()
 
   useEffect(() => {
     const fetchComponentNames = async () => {
@@ -33,6 +32,7 @@ const LessonPicker = () => {
   const handleButtonClick = (componentId) => {
     setSelectedComponent(componentId)
     navigate(`${componentId}`, { relative: true })
+    window.location.reload()
   }
 
   return (
