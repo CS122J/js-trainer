@@ -32,7 +32,7 @@ const LessonPicker = () => {
   const handleButtonClick = (componentId) => {
     setSelectedComponent(componentId)
     navigate(`${componentId}`, { relative: true })
-    window.location.reload()
+    // window.location.reload()
   }
 
   return (
