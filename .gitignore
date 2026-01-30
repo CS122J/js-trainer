@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# directories loaded from API
+src/components/
+src/exercises/
+backend/lib/utils/verify/

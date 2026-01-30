@@ -21,7 +21,16 @@ const fetchExercises = async () => {
     const extractStream = unzipper.Parse()
     response.body.pipe(extractStream)
     extractStream.on("entry", async (entry) => {
-      const filePath = path.join(directory, entry.path)
+      const isVerifyFolder = entry.path.startsWith("exercises/")
+      const baseDir = isVerifyFolder
+        ? path.join(__dirname, "./../../../backend/lib/utils")
+        : path.join(__dirname, "./../../../src")
+
+      const relativePath = entry.path
+
+      console.log(relativePath)
+
+      const filePath = path.join(baseDir, relativePath)
       const dirPath = path.dirname(filePath)
 
       // Ensure the directory exists

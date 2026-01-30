@@ -79,4 +79,9 @@ function stringifyLog(value) {
   return answer
 }
 
-export { stringifyAnswer, stringifyLog }
+function stringifyVerification(verification) {
+  if (!verification || !verification.feedback) return ""
+  return verification.feedback.join("\n")
+}
+
+export { stringifyAnswer, stringifyLog, stringifyVerification }
