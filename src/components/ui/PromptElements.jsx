@@ -71,12 +71,13 @@ const Prompt = ({ ansFilename, promptJSX, lessonId }) => {
   }
 
   const LazyOutputToHTML = lazy(async () => {
-    const { answer, log } = await getAnswer({
+    const { answer, log, verification } = await getAnswer({
       ansFilename,
       lessonId,
     })
+    console.log(answer, log, verification);
     return {
-      default: () => <OutputToHTML answer={answer} log={log} />,
+      default: () => <OutputToHTML answer={answer} log={log} verification={verification} />,
     }
   })
 
@@ -112,7 +113,7 @@ const CodeExample = ({ children }) => {
   )
 }
 
-const OutputToHTML = ({ answer, log }) => {
+const OutputToHTML = ({ answer, log, verification }) => {
   return (
     <>
       {typeof answer === "string" && answer.trim() ? (
@@ -123,6 +124,12 @@ const OutputToHTML = ({ answer, log }) => {
               <>
                 <code className="text-white">{`\n\n=== Console Log ===\n${log}`}</code>
               </>
+            )}
+            {verification && (
+              <code className="text-red-500">{`\n\n=== Issues ===\n${verification}`}</code>
+            )}
+            {!verification && (
+              <code className="text-white">{`\n\n=== Assignment Passed! ===\n`}</code>
             )}
           </pre>
         </div>
