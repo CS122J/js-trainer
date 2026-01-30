@@ -8,13 +8,6 @@ function forOfLoopObjKeys() {
     wesleyMethum: "10K",
   }
 
-  const keys = Object.keys(trackFieldAA);
-
-  // Loop through each key and log the name
-  for (const key of keys) {
-    console.log(key);
-  }
-
   return null
 }
 

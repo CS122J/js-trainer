@@ -2,13 +2,12 @@ function interpolateInString() {
   const car = "Toyota"
   const driver = "Bob"
   const speed = 80
-  const speedLimit = 35
   const officer = "Officer Tim"
   const ticketCost = 500
 
   // Your answer
   let sentence =
-    `Uncle ${driver} was driving his 1984 ${car} at ${speed} miles an hour in a ${speedLimit} mph zone. ${officer} pulled him over and issued a ticket for $${ticketCost}!`
+    "Uncle was driving his 1984 at miles an hour in a mph zone. pulled him over and issued a ticket for $!"
   return sentence
 }
 

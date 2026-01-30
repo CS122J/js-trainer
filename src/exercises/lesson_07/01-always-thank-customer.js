@@ -15,9 +15,9 @@ const invoiceData = {
 function thankCustomer(order) {
   // Your solution
 
-  const greet = `Dear ${order.buyerName},`;
-  const thank = `Thanks for your ${order.itemTitle} purchase!`;
-  const ship = `We're shipping your order to ${order.shipTo.name} in ${order.shipTo.city}, ${order.shipTo.state}.`;
+  const greet = `Dear ((NAME)),`
+  const thank = `Thanks for your ((PRODUCT)) purchase!`
+  const ship = `We're shipping your order to $((RECIPIENT)) in ((CITY)), ((STATE)).`
   // Stop here
   return `${greet}\n${thank}\n${ship}`
 }

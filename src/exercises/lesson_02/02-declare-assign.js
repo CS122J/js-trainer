@@ -1,9 +1,6 @@
 function declareAssign() {
   // Your solution
-  let myName = "Joseph";
-  console.log(myName);
-  myName = "Mark";
-  return myName;
+  return "Mark"
 }
 
 // ** EXPORT — DO NOT MODIFY ** //

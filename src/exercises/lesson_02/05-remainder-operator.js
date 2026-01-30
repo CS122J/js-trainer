@@ -1,6 +1,6 @@
 function useRemainderOperator() {
   let proposedNumber = 10
-  let isEven = proposedNumber % 2 === 0 // <-- modify this line
+  let isEven = proposedNumber // <-- modify this line
   return isEven
 }
 

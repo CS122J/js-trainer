@@ -12,7 +12,9 @@ const basket = [
 
 function pickFruits(fruits) {
   // Rewrite the following line by using array destructuring
-  const [first, second, third] = fruits;
+  const first = "pending",
+    second = "pending",
+    third = "pending"
 
   return [first, second, third]
 }

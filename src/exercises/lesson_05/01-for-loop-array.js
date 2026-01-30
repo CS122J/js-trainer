@@ -8,11 +8,7 @@ function forLoopArray() {
     "undefined",
     "symbol",
   ]
-    for (let i = 0; i < primitives.length; i++) {
-    console.log(primitives[i]); // log each primitive type
-  }
-
-  return null;
+  return null
 }
 
 /** EXPORT - DO NOT MODIFY **/

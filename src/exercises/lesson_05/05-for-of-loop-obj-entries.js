@@ -6,12 +6,7 @@ function forOfLoopObjEntries() {
     joshiahDowner: "2:39.54",
     johnHurd: "2:41.40",
   }
-  const entries = Object.entries(topMarathoners);
 
-  // Loop through each entry
-  for (const [name, time] of entries) {
-    console.log(`Name: ${name} | Time ${time}`);
-  }
   return null
 }
 

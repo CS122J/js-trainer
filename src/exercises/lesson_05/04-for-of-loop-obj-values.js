@@ -9,14 +9,7 @@ function forOfLoopObjValues() {
     charitySchroeder: "5:31.04",
   }
 
-  const times = Object.values(topMilers);
-
-  // Loop through each time and log it
-  for (const time of times) {
-    console.log(time);
-  }
-
-  return null;
+  return null
 }
 
 /** EXPORT - DO NOT MODIFY **/

@@ -1,11 +1,7 @@
 function countBs(str) {
-  let count = 0; // initialize counter
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === "B") { // check if the current character is "B"
-      count++;
-    }
-  }
-  return count; // return the total count
+  // define function body
+
+  return
 }
 
 const myStr = "BBC"

@@ -14,17 +14,16 @@ const myCar = {
 }
 
 // Update the parameters to use destructuring instead
-function createAd({ year, makeModel, style, price, mileage }) {
-  let myPost;
+function createAd(car) {
+  let myPost
   try {
-    myPost = `Hey, everyone! I'm selling a ${year} ${makeModel} ${style} for just $${price}! It has just ${mileage} miles and is in great condition. So, my question is, "What's it gonna take to get you into this car?"`;
+    myPost = `Hey, everyone! I'm selling a ${year} ${makeModel} ${style} for just $${price}! It has just ${mileage} miles and is in great condition. So, my question is, "What's it gonna take to get you into this car?"`
   } catch (e) {
-    return `Oops! You have an error. ${e}`;
+    return `Oops! You have an error. ${e}`
   }
 
-  return myPost;
+  return myPost
 }
-
 
 /** EXPORT - DO NOT MODIFY **/
 export const answer = createAd(myCar)

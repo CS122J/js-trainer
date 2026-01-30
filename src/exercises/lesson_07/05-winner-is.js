@@ -31,13 +31,14 @@ const bestPics = [
 let movie = bestPics[0]
 
 // Update the parameters to use destructuring instead
-function makeAnnouncement({ year, title, category, director }) {
+function makeAnnouncement(movie) {
+  let message
   try {
-    return `The Academy of Motion Pictures is proud to announce the winner of the ${year} Best Picture Award to ${title}! Congratulations to director ${director} for this wonderful ${category} film!`;
+    message = `The Academy of Motion Pictures is proud to announce the winner of the ??? Best Picture Award to ???! Congratulations to director ??? for this wonderful ??? film!`
   } catch (e) {
-    return `Oops! You have an error. ${e}`;
+    return `Oops! You have an error. ${e}`
   }
+  return message
 }
-
 /** EXPORT - DO NOT MODIFY **/
 export const answer = makeAnnouncement(movie)

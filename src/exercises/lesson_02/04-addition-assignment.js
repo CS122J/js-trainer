@@ -1,6 +1,5 @@
 function useAdditionOperator() {
   let count = 5
-  count += 2
   return count
 }
 

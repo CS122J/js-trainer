@@ -3,7 +3,7 @@ function fireConditions() {
   let hasFuel = true
   let isWet = false
   let hasFireConditions = false
-  if (hasSpark && hasFuel && !isWet) {
+  if (/* modify code here */ isWet) {
     hasFireConditions = true
   }
   const answer = "Do we have fire conditions? " + hasFireConditions

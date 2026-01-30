@@ -1,7 +1,7 @@
 function escapeCharacters() {
   // Your solution
   const str =
-    `The professor asked, "Who demanded, 'Give me liberty or give me death!' in 1775?"`
+    "The professor asked, Who demanded, Give me liberty or give me death! in 1775?"
   return str
 }
 

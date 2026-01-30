@@ -1,7 +1,7 @@
 function useComparisonOperator() {
   let sleepHours = 10
   let feeling = ""
-  if (sleepHours < 8) {
+  if (sleepHours /* add logic here */) {
     feeling = "tired"
   } else {
     feeling = "rested"

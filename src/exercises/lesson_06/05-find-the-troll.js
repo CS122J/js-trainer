@@ -13,13 +13,9 @@ const logData = [
 
 function trollDetection() {
   // Your solution
-  function findTroll(user) {
-    return user.ip === "83.86.11.184" && user.online === true;
-  }
+  function findTroll() {}
 
-  // Use find to locate the first matching user
-  const troll = logData.find(findTroll).name;
-  return troll;
+  return null
 }
 
 /** EXPORT - DO NOT MODIFY **/

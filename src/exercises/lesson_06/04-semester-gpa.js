@@ -3,19 +3,11 @@ const maryGrades = [4.0, 2.3, 3.3, 3.0, 3.7, 4.0]
 const juanGrades = [1.3, 4.0, 3.0, 2.0, 3.7, 2.7]
 
 function semesterGPA() {
-  function calcGPA(grades) {
-    const sum = grades.reduce((acc, grade) => acc + grade, 0);
-    const average = sum / grades.length;
-    return Number(average.toFixed(3));
-  }
+  // Your solution
 
-  // Calculate each student's GPA
-  const bobGPA = calcGPA(bobGrades);
-  const maryGPA = calcGPA(maryGrades);
-  const juanGPA = calcGPA(juanGrades);
+  function getGPA() {}
 
-  // Return a string with each student's GPA on a new line
-  return `Bob: ${bobGPA}\nMary: ${maryGPA}\nJuan: ${juanGPA}`;
+  return null
 }
 
 /** EXPORT - DO NOT MODIFY **/
