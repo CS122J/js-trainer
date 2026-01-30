@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# # directories loaded from API
-# ./src/components/
-# ./src/exercises/
-# ./backend/lib/verify/
+# directories loaded from API
+./src/components/
+./src/exercises/
+./backend/lib/verify/
