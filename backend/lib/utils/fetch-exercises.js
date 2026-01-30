@@ -21,14 +21,12 @@ const fetchExercises = async () => {
     const extractStream = unzipper.Parse()
     response.body.pipe(extractStream)
     extractStream.on("entry", async (entry) => {
-      const isVerifyFolder = entry.path.startsWith("verify/")
+      const isVerifyFolder = entry.path.startsWith("exercises/")
       const baseDir = isVerifyFolder
-        ? path.join(__dirname, "./../../../backend/lib/verify")
+        ? path.join(__dirname, "./../../../backend/lib/utils")
         : path.join(__dirname, "./../../../src")
-      
-      const relativePath = isVerifyFolder
-        ? entry.path.replace(/^verify\//, "")
-        : entry.path
+
+      const relativePath = entry.path
 
       console.log(relativePath)
 

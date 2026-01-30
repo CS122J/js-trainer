@@ -26,4 +26,4 @@ dist-ssr
 # directories loaded from API
 src/components/
 src/exercises/
-backend/lib/verify/
+backend/lib/utils/verify/
