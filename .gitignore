@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # directories loaded from API
-src/components/
+src/components/prompts/
 src/exercises/
 src/verify/
 # backend/lib/verify/
