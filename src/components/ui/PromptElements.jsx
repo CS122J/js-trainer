@@ -4,7 +4,7 @@ import { nanoid } from "nanoid"
 import AccordionItem from "./Accordion"
 const currPathMinus3Levels = new URL(import.meta.url).pathname.replace(
   /\/[^/]*\/[^/]*\/[^/]*$/,
-  ""
+  "",
 )
 
 const getAnswer = async ({ lessonId, ansFilename }) => {
@@ -75,9 +75,11 @@ const Prompt = ({ ansFilename, promptJSX, lessonId }) => {
       ansFilename,
       lessonId,
     })
-    console.log(answer, log, verification);
+    console.log(answer, log, verification)
     return {
-      default: () => <OutputToHTML answer={answer} log={log} verification={verification} />,
+      default: () => (
+        <OutputToHTML answer={answer} log={log} verification={verification} />
+      ),
     }
   })
 
@@ -129,7 +131,7 @@ const OutputToHTML = ({ answer, log, verification }) => {
               <code className="text-red-500">{`\n\n=== Issues ===\n${verification}`}</code>
             )}
             {!verification && (
-              <code className="text-white">{`\n\n=== Assignment Passed! ===\n`}</code>
+              <code className="text-white">{`\n\n=== Passed Validations! ===\n`}</code>
             )}
           </pre>
         </div>
