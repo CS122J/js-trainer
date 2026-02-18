@@ -25,6 +25,5 @@ dist-ssr
 
 # directories loaded from API
 src/components/prompts/
-src/exercises/
 src/verify/
-# backend/lib/verify/
+# src/exercises/ --> keep exposed for LiveShare purposes
